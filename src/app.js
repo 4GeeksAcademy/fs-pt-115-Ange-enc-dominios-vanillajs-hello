@@ -14,12 +14,24 @@ let adj = ['great', 'big'];
 let noun = ['jogger', 'racoon'];
 let domain = ['.com', '.es', '.org', '.net']
 
+let container =document.getElementById('domainContainer');
+
 for (let i = 0; i < pronoun.length; i++) {
   for (let j = 0; j < adj.length; j++) {
     for (let h = 0; h < noun.length; h++) {
       for (let k = 0; k <domain.length; k++){
       let elements = pronoun[i] + adj[j] + noun[h] + domain[k];
       console.log(elements);
+
+      let col = document.createElement('div');
+      col.className = 'col-sm-6 col-md-4 col-lg-3 mb-3';
+
+      let card = document.createElement('div');
+      card.className = 'card p-3 text-center' ;
+      
+        card.textContent = elements;
+        col.appendChild(card);
+        container.appendChild(col);
       }
     }
   }
