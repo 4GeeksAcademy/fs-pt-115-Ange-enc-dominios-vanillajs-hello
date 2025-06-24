@@ -23,23 +23,22 @@ for (let i = 0; i < pronoun.length; i++) {
       let elements = pronoun[i] + adj[j] + noun[h] + domain[k];
       console.log(elements);
 
+        // Columna Bootstrap para organizar la cuadrícula
       let col = document.createElement('div');
       col.className = 'col-sm-6 col-md-4 col-lg-3 mb-3';
-
+        //Tarjeta para el dominio
       let card = document.createElement('div');
       card.className = 'card p-3 text-center' ;
       
       
-      // Nuevo enlace con el dominio
-      
+        // Nuevo enlace <a> con el dominio generado
       let link = document.createElement('a');
       link.href='https://' + elements;
       link.target = '_blank' ;
       link.textContent = elements;
-      link.className ='text-decoration-none w-bold text-primary';
-        
+
+          
         card.appendChild(link);
-        card.textContent = elements;
         col.appendChild(card);
         container.appendChild(col);
       }
