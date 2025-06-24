@@ -29,6 +29,16 @@ for (let i = 0; i < pronoun.length; i++) {
       let card = document.createElement('div');
       card.className = 'card p-3 text-center' ;
       
+      
+      // Nuevo enlace con el dominio
+      
+      let link = document.createElement('a');
+      link.href='https://' + elements;
+      link.target = '_blank' ;
+      link.textContent = elements;
+      link.className ='text-decoration-none w-bold text-primary';
+        
+        card.appendChild(link);
         card.textContent = elements;
         col.appendChild(card);
         container.appendChild(col);
